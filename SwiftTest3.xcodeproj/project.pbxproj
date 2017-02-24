@@ -15,6 +15,10 @@
 		4A10C5C71E5F2E6B00B46AF2 /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A10C5C51E5F2E6B00B46AF2 /* SettingsCell.xib */; };
 		4A10C5CB1E5F36B500B46AF2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A10C5CA1E5F36B500B46AF2 /* Constants.swift */; };
 		4A6CBA911E5F5AC100AA8BF3 /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CBA901E5F5AC100AA8BF3 /* TestTableViewController.swift */; };
+		4AE11BF91E60167500090084 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE11BF81E60167500090084 /* Protocols.swift */; };
+		4AE11BFB1E6016D200090084 /* Structures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE11BFA1E6016D200090084 /* Structures.swift */; };
+		4AE11BFD1E60173100090084 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE11BFC1E60173100090084 /* Enums.swift */; };
+		4AE11BFF1E60211F00090084 /* CreateAndGetAllDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE11BFE1E60211F00090084 /* CreateAndGetAllDate.swift */; };
 		7C7B30151E57951400BF54C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7B30141E57951400BF54C9 /* AppDelegate.swift */; };
 		7C7B30171E57951400BF54C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7B30161E57951400BF54C9 /* ViewController.swift */; };
 		7C7B301A1E57951400BF54C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C7B30181E57951400BF54C9 /* Main.storyboard */; };
@@ -34,6 +38,10 @@
 		4A10C5C51E5F2E6B00B46AF2 /* SettingsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
 		4A10C5CA1E5F36B500B46AF2 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4A6CBA901E5F5AC100AA8BF3 /* TestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
+		4AE11BF81E60167500090084 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		4AE11BFA1E6016D200090084 /* Structures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Structures.swift; sourceTree = "<group>"; };
+		4AE11BFC1E60173100090084 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		4AE11BFE1E60211F00090084 /* CreateAndGetAllDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAndGetAllDate.swift; sourceTree = "<group>"; };
 		7C7B30111E57951400BF54C9 /* SwiftTest3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTest3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C7B30141E57951400BF54C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C7B30161E57951400BF54C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +68,10 @@
 		4A10C5B31E5F2B7F00B46AF2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4AE11BF81E60167500090084 /* Protocols.swift */,
+				4AE11BFA1E6016D200090084 /* Structures.swift */,
+				4AE11BFC1E60173100090084 /* Enums.swift */,
+				4AE11BFE1E60211F00090084 /* CreateAndGetAllDate.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -193,7 +205,7 @@
 				TargetAttributes = {
 					7C7B30101E57951400BF54C9 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 6F5JN764XD;
+						DevelopmentTeam = 5JYT4SC2DQ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -240,9 +252,13 @@
 				4A10C5BF1E5F2E3E00B46AF2 /* Settings.swift in Sources */,
 				4A6CBA911E5F5AC100AA8BF3 /* TestTableViewController.swift in Sources */,
 				7C7B30171E57951400BF54C9 /* ViewController.swift in Sources */,
+				4AE11BF91E60167500090084 /* Protocols.swift in Sources */,
 				7C7B30281E57955200BF54C9 /* CustomCell.swift in Sources */,
+				4AE11BFF1E60211F00090084 /* CreateAndGetAllDate.swift in Sources */,
 				4A10C5BD1E5F2DAD00B46AF2 /* Users.swift in Sources */,
 				7C7B30151E57951400BF54C9 /* AppDelegate.swift in Sources */,
+				4AE11BFD1E60173100090084 /* Enums.swift in Sources */,
+				4AE11BFB1E6016D200090084 /* Structures.swift in Sources */,
 				4A10C5C21E5F2E5B00B46AF2 /* UsersCell.swift in Sources */,
 				4A10C5C61E5F2E6B00B46AF2 /* SettingsCell.swift in Sources */,
 				7C7B302B1E57986600BF54C9 /* Extensions.swift in Sources */,
@@ -369,10 +385,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6F5JN764XD;
+				DEVELOPMENT_TEAM = 5JYT4SC2DQ;
 				INFOPLIST_FILE = SwiftTest3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.personal.SwiftTest3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.Test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -382,10 +398,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6F5JN764XD;
+				DEVELOPMENT_TEAM = 5JYT4SC2DQ;
 				INFOPLIST_FILE = SwiftTest3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.personal.SwiftTest3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.Test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

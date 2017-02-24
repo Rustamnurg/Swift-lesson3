@@ -15,7 +15,7 @@ class Settings: UITableViewController {
         super.viewDidLoad()
         let nib = UINib(nibName: "SettingsCell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: settingsCellIdentifier)
-  
+          
     }
     
 
@@ -45,13 +45,13 @@ extension Settings {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return UserParameters.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: settingsCellIdentifier, for: indexPath) as! SettingsCell
-        
+        cell.parameterLabel.text = UserParameters.getRowName(index: indexPath.row)
         return cell
     }
 
