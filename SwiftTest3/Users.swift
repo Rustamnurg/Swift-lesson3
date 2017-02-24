@@ -20,7 +20,7 @@ class Users: UITableViewController {
         let nib = UINib(nibName: "UsersCell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: usersCellIdentifier)
         self.tableView.allowsSelection = false
-        primaryArrWithUsers = GetArr()
+        primaryArrWithUsers = GetArrWithUsers()
         
     }
     
@@ -74,8 +74,10 @@ extension Users {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: usersCellIdentifier, for: indexPath) as! UsersCell
         let user: UserProfile = arrWithUsers[indexPath.row]
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy"
         cell.fullNameLabel.text = user.getFullName()
-        cell.dateLabel.text = String(describing: user.dateBorn)
+        cell.dateLabel.text = formatter.string(from: user.dateBorn)
         cell.genderLabel.text = user.gender
         return cell
     }
