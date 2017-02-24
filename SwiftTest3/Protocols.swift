@@ -24,3 +24,5 @@ extension UserProfile {
 protocol GendorOfUser {
     var gender: String { get set}
 }
+
+

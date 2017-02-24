@@ -8,9 +8,17 @@
 
 import UIKit
 
+
+
+protocol CellSubclassDelegate: class {
+    func switchDidChangeAtRow(cell: SettingsCell)
+}
+
 class SettingsCell: UITableViewCell {
     @IBOutlet weak var parameterLabel: UILabel!
     @IBOutlet weak var parameterSwitch: UISwitch!
+
+    var delegate: CellSubclassDelegate?
     
 
     override func awakeFromNib() {
@@ -23,5 +31,10 @@ class SettingsCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+
     
+    @IBAction func switchButtonAction(_ sender: UISwitch) {
+        guard self.delegate != nil else {assertionFailure("Be sure delegate not Nil!"); return}
+        self.delegate?.switchDidChangeAtRow(cell: self)
+    }
 }

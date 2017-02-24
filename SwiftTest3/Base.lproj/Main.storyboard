@@ -25,7 +25,7 @@
                     <navigationItem key="navigationItem" title="Users" id="adg-EC-ro4">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="irf-jp-J2U">
                             <connections>
-                                <segue destination="2TQ-br-6gB" kind="presentation" id="9ua-Bj-AdD"/>
+                                <segue destination="2TQ-br-6gB" kind="presentation" identifier="SettingsSegue" id="9ua-Bj-AdD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -42,24 +42,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="QIg-GB-q8A">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <items>
-                                <navigationItem title="Settings" id="NG3-nR-Wfn">
-                                    <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="EqH-0W-tn1">
-                                        <connections>
-                                            <action selector="cancelButtonAction:" destination="2TQ-br-6gB" id="OeF-Df-wce"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </navigationItem>
-                            </items>
-                        </navigationBar>
                         <connections>
                             <outlet property="dataSource" destination="2TQ-br-6gB" id="hFk-WM-mNK"/>
                             <outlet property="delegate" destination="2TQ-br-6gB" id="ztM-im-V3p"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Settings" id="zGx-UN-XFK">
+                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="6ec-cl-Wlc">
+                            <connections>
+                                <action selector="cancelButtonAction:" destination="2TQ-br-6gB" id="NGY-QC-eXu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1lj-6d-EeN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

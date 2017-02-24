@@ -8,38 +8,44 @@
 
 import UIKit
 
-
 class Users: UITableViewController {
     var primaryArrWithUsers: [UserProfile] = []
     var arrWithUsers: [UserProfile] = []
+    var sortBy: Int = -1
     
-    var sortBy: Int?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        let nib = UINib(nibName: "UsersCell", bundle: nil)
-        self.tableView.register(nib, forCellReuseIdentifier: usersCellIdentifier)
+        self.tableView.register(UsersCell.nib, forCellReuseIdentifier: UsersCell.cellIdentifier)
         self.tableView.allowsSelection = false
         primaryArrWithUsers = GetArrWithUsers()
-        
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         sortUsers()
         self.tableView.reloadData()
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SettingsSegue" {
+            let destination = segue.destination as! Settings
+            destination.delegate = self
+            destination.selectedSwitchAtRow = sortBy
+        }
+    }
+
 }
 
 extension Users {
     // MARK: -  My
     func sortUsers(){
-        guard sortBy != nil, sortBy != -1 else {
+        guard sortBy != -1 else {
             arrWithUsers = primaryArrWithUsers
             return
         }
         
-        switch sortBy! {
+        switch sortBy {
         case 0:
             arrWithUsers = primaryArrWithUsers.sorted (by: { $0.firstName < $1.firstName })
         case 1:
@@ -56,12 +62,6 @@ extension Users {
 
 
 extension Users {
-    // MARK: -  UI
-    
-}
-
-
-extension Users {
     // MARK: -  Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -72,7 +72,7 @@ extension Users {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: usersCellIdentifier, for: indexPath) as! UsersCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: UsersCell.cellIdentifier, for: indexPath) as! UsersCell
         let user: UserProfile = arrWithUsers[indexPath.row]
         let formatter = DateFormatter()
         formatter.dateFormat = "dd.MM.yyyy"
@@ -82,6 +82,10 @@ extension Users {
         return cell
     }
     
-    
 }
 
+extension Users: SettingsDelegate{
+    func sortByThis(sortBy: Int) {
+       self.sortBy = sortBy
+    }
+}
