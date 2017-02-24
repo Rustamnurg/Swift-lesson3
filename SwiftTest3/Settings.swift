@@ -13,6 +13,7 @@ protocol SettingsDelegate {
 }
 
 class Settings: UITableViewController {
+    @IBOutlet weak var navBar: UINavigationItem!
     var selectedSwitchAtRow = -1
     var delegate: SettingsDelegate?
 
@@ -20,20 +21,25 @@ class Settings: UITableViewController {
         super.viewDidLoad()
         self.tableView.allowsSelection = false
         self.tableView.register(SettingsCell.nib, forCellReuseIdentifier: SettingsCell.cellIdentifier)
+        self.navigationController?.isNavigationBarHidden = false
     }
+   
+    
 
 }
 
 
 extension Settings {
     // MARK: -  UI
-    @IBAction func cancelButtonAction(_ sender: UIBarButtonItem) {
-        if let Ldelegate = delegate {
+    @IBAction func replyButtonAction(_ sender: UIBarButtonItem) {
+            if let Ldelegate = delegate {
             Ldelegate.sortByThis(sortBy: -1)
         }
         dismiss(animated: true, completion: nil)
     }
+
 }
+
 
 extension Settings {
     // MARK: -  Table view data source

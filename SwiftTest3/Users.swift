@@ -18,7 +18,9 @@ class Users: UITableViewController {
         super.viewDidLoad()
         self.tableView.register(UsersCell.nib, forCellReuseIdentifier: UsersCell.cellIdentifier)
         self.tableView.allowsSelection = false
+        
         primaryArrWithUsers = GetArrWithUsers()
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
